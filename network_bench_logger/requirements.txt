@@ -1,0 +1,7 @@
+flask
+requests
+kafka-python
+geopy
+geographiclib
+numpy
+ujson

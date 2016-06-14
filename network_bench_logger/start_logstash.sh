@@ -1,0 +1,1 @@
+logstash -e 'input { kafka{consumer_id => "elastic_appender" topic_id => "single_packet_points" zk_connect => "localhost:2181" codec => "json"} } output { elasticsearch {codec => "json" protocol => "http" index => "single_packet_points" }}'
