@@ -1,6 +1,6 @@
 # Overview:
 
-## network_bench_logger
+## network\_bench\_logger
 
 This was a project that was developed at a hackathon
 for surveying network conditions for users on a train.
@@ -30,13 +30,14 @@ the end of the weekend.
 
 Unfortunately the Elastic mapping is missing
 
-## auth_forwarder:
+## auth\_forwarder:
 This is part of a very quick 3 hour hack that is designed to facilitate
 easier sign-ins to a webapp. The original workflow was that users would
 provide their credentials in a form, and they would be issued a 24 hour
 ephemeral login, which they would have to manually authenticate with.
 
 The alternate workflow that was developed was:
+
 1. Enter information into app, where it will be saved for future use
 2. Submit info to Flask service, which queries the legacy credential server
 3. Credentials are received from the credential server
@@ -44,9 +45,9 @@ The alternate workflow that was developed was:
 5. The user is redirected to the login page for the webapp, and necessary
 	authentication information is appended as GET parameters.
 
-	This is not secure, but after discussion with the people running the app,
-	and considering the 24-hour ephemeral nature of the logins, we ruled this
-	an acceptable risk.
+   This is not secure, but after discussion with the people running the app,
+and considering the 24-hour ephemeral nature of the logins, we ruled this
+an acceptable risk.
 6. The WebApp has no awareness of the GET parameters that injected.
 7. JS Injection via a Chrome/Firefox extension occurs, session cookies are
 	set, and the user is dropped into an authenticated session.
